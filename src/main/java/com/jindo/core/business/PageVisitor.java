@@ -3,7 +3,7 @@ package com.jindo.core.business;
 import com.jindo.core.log.LogFactory;
 import com.jindo.core.model.Page;
 import com.jindo.core.model.User;
-import java.util.logging.Logger;
+import org.apache.log4j.Logger;
 
 /**
  * @author ManhKM on 9/5/2022
@@ -20,7 +20,5 @@ public class PageVisitor {
    */
   public void visit(User user, Page page){
     logger.info(user + " visited "+ page);
-    logger.warning(user + " visited "+ page);
-    logger.severe(user + " visited "+ page);
   }
 }

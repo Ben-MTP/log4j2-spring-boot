@@ -6,7 +6,6 @@
 
 
 ## Reference Document
-1. Spring boot log4j2.xml example
-   https://howtodoinjava.com/spring-boot2/logging/spring-boot-log4j2-config/
+1. [Spring boot log4j2.xml example](https://howtodoinjava.com/spring-boot2/logging/spring-boot-log4j2-config/)
    
-2. 
+2. [Tutorial Point Log4j](https://www.tutorialspoint.com/log4j/index.htm)

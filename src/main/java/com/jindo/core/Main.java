@@ -4,7 +4,7 @@ import com.jindo.core.business.PageVisitor;
 import com.jindo.core.log.LogFactory;
 import com.jindo.core.model.Page;
 import com.jindo.core.model.User;
-import java.util.logging.Logger;
+import org.apache.log4j.Logger;
 
 /**
  * @author ManhKM on 9/5/2022
@@ -12,11 +12,13 @@ import java.util.logging.Logger;
  * -----
  * Nếu sử dụng mỗi console thì có thể sẽ bị tràn màn hình log
  * Cần có cơ chế logging để check được activity của EndUser
+ * -----
+ * Có thể thay đổi format cho định dạng log ra ngoài file
  *
  */
 public class Main {
 
-    private static final Logger logger = LogFactory.getLogger();
+    public static final Logger logger = LogFactory.getLogger();
 
     public static void main(String[] args) {
         Page page = new Page("HomePage", "http://fresher.academy");

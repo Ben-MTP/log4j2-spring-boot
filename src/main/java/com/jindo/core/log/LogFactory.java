@@ -1,10 +1,7 @@
 package com.jindo.core.log;
 
-import java.io.IOException;
-import java.util.logging.FileHandler;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
+
+import org.apache.log4j.Logger;
 
 /**
  * @author ManhKM on 9/5/2022
@@ -14,18 +11,7 @@ public class LogFactory {
 
     public static Logger getLogger(){
 
-        Logger logger = Logger.getLogger("Fresher Academy");
-        FileHandler fileHandler = null;
-
-        try {
-            fileHandler = new FileHandler("logs/login/page-visitor.log");
-            fileHandler.setFormatter(new SimpleFormatter());
-            logger.addHandler(fileHandler);
-            logger.setLevel(Level.WARNING);         // Set Level in ra là WARNING -> cấp bé hơn WARNING sẽ in ra
-            logger.setUseParentHandlers(false);     // Chỉ in ra file, không in ra console
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Logger logger = Logger.getLogger(Thread.currentThread().getStackTrace()[2].getClassName());
 
         return logger;
     }
